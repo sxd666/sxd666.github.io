@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>sxd666</title>
+  <title>树上游戏 | sxd666</title>
   
   
 
@@ -98,43 +98,16 @@
     <div class="l_body">
     <div class='container clearfix'>
         <div class='l_main'>
-            
-
-
-
-  <section class="post-list">
-      
-        
-          
-        
-          
-        
-      
-
-
-
-      
-
-      
-
-      
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-    
+            <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
+  
 <section class="meta">
   
   
   <div class="meta" id="header-meta">
     
-      <h2 class="title">
-          <a href="/2019/03/15/树上游戏/">
-              
-                  树上游戏
-              
-          </a>
-      </h2>
+      
+          <h1 class="title">树上游戏</h1>
+      
     
 
     <div class="new-meta-box">
@@ -158,6 +131,17 @@
         
       
       
+        
+          <div class="new-meta-item browse busuanzi">
+            <a class="notlink">
+              <i class="fas fa-eye" aria-hidden="true"></i>
+              <span id="busuanzi_value_page_pv">
+                <i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i>
+              </span>
+            </a>
+          </div>
+        
+      
       
     </div>
     <hr>
@@ -165,6 +149,7 @@
 </section>
 
     <section class="article typo">
+      <div class="article-entry" itemprop="articleBody">
         <p>此题显然有<strong>O（n）做法</strong>，喵喵喵？</p>
 <h2 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h2><p>让我们考虑一种颜色对答案的贡献</p>
 <p>我们考虑把树中这种颜色的点都删掉，那么就会有很多的小树，这些小树中的点互相之间不会产生贡献，而不同树的两个点之间会产生贡献。</p>
@@ -177,105 +162,70 @@
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="title">read</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> ch=getchar();<span class="keyword">long</span> <span class="keyword">long</span> x=<span class="number">0</span>,ff=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span>(ch&lt;<span class="string">'0'</span>||ch&gt;<span class="string">'9'</span>) &#123;<span class="keyword">if</span>(ch==<span class="string">'-'</span>) ff=<span class="number">-1</span>;ch=getchar();&#125;</span><br><span class="line">	<span class="keyword">while</span>(ch&gt;=<span class="string">'0'</span>&amp;&amp;ch&lt;=<span class="string">'9'</span>) x=x*<span class="number">10</span>+ch-<span class="string">'0'</span>,ch=getchar();</span><br><span class="line">	<span class="keyword">return</span> x*ff;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">write</span><span class="params">(<span class="keyword">long</span> <span class="keyword">long</span> aa)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(aa&lt;<span class="number">0</span>) <span class="built_in">putchar</span>(<span class="string">'-'</span>),aa=-aa;</span><br><span class="line">	<span class="keyword">if</span>(aa&gt;<span class="number">9</span>) write(aa/<span class="number">10</span>);</span><br><span class="line">	<span class="built_in">putchar</span>(<span class="string">'0'</span>+aa%<span class="number">10</span>);</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> n,sum,qwq;</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> vis[<span class="number">100005</span>],ans[<span class="number">100005</span>];</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> tot,head[<span class="number">100005</span>],nx[<span class="number">200005</span>],to[<span class="number">200005</span>];</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> col[<span class="number">100005</span>],sz[<span class="number">100005</span>],jian[<span class="number">100005</span>]；</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> lz[<span class="number">100005</span>],bj[<span class="number">100005</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">jia</span><span class="params">(<span class="keyword">long</span> <span class="keyword">long</span> aa,<span class="keyword">long</span> <span class="keyword">long</span> bb)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	tot++;</span><br><span class="line">	nx[tot]=head[aa];</span><br><span class="line">	to[tot]=bb;</span><br><span class="line">	head[aa]=tot;</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">long</span> <span class="keyword">long</span> rt,<span class="keyword">long</span> <span class="keyword">long</span> fa)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	sz[rt]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">long</span> <span class="keyword">long</span> tmp=jian[col[fa]];<span class="comment">//遍历时删的个数</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">long</span> <span class="keyword">long</span> i=head[rt];i;i=nx[i])</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">long</span> <span class="keyword">long</span> yy=to[i];</span><br><span class="line">		<span class="keyword">if</span>(yy==fa) <span class="keyword">continue</span>;</span><br><span class="line">		dfs(yy,rt);</span><br><span class="line">		sz[rt]+=sz[yy];</span><br><span class="line">	&#125;</span><br><span class="line">	jian[col[rt]]++;<span class="comment">//删点</span></span><br><span class="line">	<span class="keyword">if</span>(fa)</span><br><span class="line">	&#123;</span><br><span class="line">		lz[rt]=sz[rt]-jian[col[fa]]+tmp;<span class="comment">//子树的size - （当前删的个数 - 遍历时删的个数）</span></span><br><span class="line">		jian[col[fa]]+=lz[rt];<span class="comment">//删点</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">getans</span><span class="params">(<span class="keyword">long</span> <span class="keyword">long</span> rt,<span class="keyword">long</span> <span class="keyword">long</span> fa)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">long</span> <span class="keyword">long</span> yuanbj=bj[col[fa]];</span><br><span class="line">	qwq+=lz[rt]-bj[col[fa]];<span class="comment">//差分啦</span></span><br><span class="line">	bj[col[fa]]=lz[rt];</span><br><span class="line">	ans[rt]=n*sum-qwq+bj[col[rt]];<span class="comment">//自己颜色的显然是不能删掉的</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">long</span> <span class="keyword">long</span> i=head[rt];i;i=nx[i])</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">long</span> <span class="keyword">long</span> yy=to[i];</span><br><span class="line">		<span class="keyword">if</span>(yy==fa) <span class="keyword">continue</span>;</span><br><span class="line">		getans(yy,rt);</span><br><span class="line">	&#125;</span><br><span class="line">	bj[col[fa]]=yuanbj;</span><br><span class="line">	qwq-=lz[rt]-bj[col[fa]];<span class="comment">//还原啦</span></span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	n=read();</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">long</span> <span class="keyword">long</span> i=<span class="number">1</span>;i&lt;=n;++i) </span><br><span class="line">	&#123;</span><br><span class="line">		col[i]=read();<span class="comment">//col[i]&lt;=100000,可能大于n。。。。</span></span><br><span class="line">		<span class="keyword">if</span>(!vis[col[i]]) vis[col[i]]=<span class="number">1</span>,sum++;<span class="comment">//sum颜色种类</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">long</span> <span class="keyword">long</span> i=<span class="number">1</span>;i&lt;n;++i) </span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">long</span> <span class="keyword">long</span> x=read(),y=read();</span><br><span class="line">		jia(x,y);jia(y,x);</span><br><span class="line">	&#125;</span><br><span class="line">	dfs(<span class="number">1</span>,<span class="number">0</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">long</span> <span class="keyword">long</span> i=<span class="number">1</span>;i&lt;=<span class="number">100000</span>;++i) <span class="keyword">if</span>(vis[i]) qwq+=n-jian[i],bj[i]=n-jian[i];<span class="comment">//特别处理根节点</span></span><br><span class="line">	getans(<span class="number">1</span>,<span class="number">0</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">long</span> <span class="keyword">long</span> i=<span class="number">1</span>;i&lt;=n;++i) write(ans[i]),<span class="built_in">puts</span>(<span class="string">""</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>大家见谅，讲得自己都qwq了。。。</p>
 
+      </div>
+        
+          <section class="meta" id="footer-meta">
+            <hr>
+            <div class="new-meta-box">
+              
+                <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-03-15T16:28:14+08:00">
+                  <a class="notlink">
+                    <i class="fas fa-pencil-alt" aria-hidden="true"></i>
+                    2019-03-15
+                  </a>
+                </div>
+              
+              
+                
+                <div class="new-meta-item meta-tags"><a class="tag" href="/tags/树/"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;树</a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/alb/"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;alb</a></div>
+              
+              
+            </div>
+          </section>
         
 
         
-            <div class="full-width auto-padding tags">
+            <div class="prev-next">
                 
-                    <a href="/tags/树/"><i class="fas fa-hashtag fa-fw"></i>树</a>
                 
-                    <a href="/tags/alb/"><i class="fas fa-hashtag fa-fw"></i>alb</a>
+                    <section class="next">
+                        <span class="art-item-right" aria-hidden="true">
+                            <h6>Next&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                            <h4>
+                                <a href="/2019/03/15/hello-world/" rel="prev" title="Hello World">
+                                    
+                                        Hello World
+                                    
+                                </a>
+                            </h4>
+                            
+                        </span>
+                    </section>
                 
             </div>
         
+
     </section>
+
 </article>
 
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-    
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/2019/03/15/hello-world/">
-              
-                  Hello World
-              
-          </a>
-      </h2>
-    
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
 
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="/sxd666.github.io">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            sxd666
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            2019-03-15
-          </a>
-        </div>
-      
-      
-        
-      
-      
-      
-    </div>
-    <hr>
-  </div>
-</section>
 
-    <section class="article typo">
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<br>
 
-        
-
-        
-    </section>
-</article>
-
-            </div>
-          
-        
-      
-
-  </section>
+<!-- 显示推荐文章和评论 -->
 
 
 
 
 
-
-  
-
-  <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-  
-
-  
-
-
+<script>
+    window.subData = {
+        title: '树上游戏',
+        tools: true
+    }
+</script>
 
 
         </div>
@@ -352,6 +302,20 @@
       
       
         
+  <section class="toc-wrapper">
+    
+<header class="material">
+  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;Table of Contents</div>
+  
+    <div class="wrapper"><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div>
+  
+</header>
+
+    <div class="content material">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#解法："><span class="toc-text">解法：</span></a></li></ol>
+    </div>
+  </section>
+
 
       
     
