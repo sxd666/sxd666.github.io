@@ -151,6 +151,7 @@
     <section class="article typo">
       <div class="article-entry" itemprop="articleBody">
         <p>此题显然有<strong>O（n）做法</strong>，喵喵喵？</p>
+<a id="more"></a>
 <h2 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h2><p>让我们考虑一种颜色对答案的贡献</p>
 <p>我们考虑把树中这种颜色的点都删掉，那么就会有很多的小树，这些小树中的点互相之间不会产生贡献，而不同树的两个点之间会产生贡献。</p>
 <p>由此，我们可以得到每一种颜色，点的sum值就是 <strong>n - 所在小树的size</strong>。</p>
@@ -168,7 +169,7 @@
             <hr>
             <div class="new-meta-box">
               
-                <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-03-15T16:28:14+08:00">
+                <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-03-15T16:29:08+08:00">
                   <a class="notlink">
                     <i class="fas fa-pencil-alt" aria-hidden="true"></i>
                     2019-03-15
