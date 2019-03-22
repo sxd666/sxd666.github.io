@@ -1666,17 +1666,17 @@ pre .javascript .function {
   bottom: 0;
   width: 0;
   z-index: 1040;
-  box-shadow: inset 0 2px 6px #000;
-  background: #222;
+  box-shadow: inset 0 2px 6px #fff;
+  background: rgba(26,0,41,0.788);
 }
 .sidebar a,
 .sidebar span.exturl {
-  color: #999;
-  border-bottom-color: #555;
+  color: #d4d838;
+  border-bottom-color: #d4d838;
 }
 .sidebar a:hover,
 .sidebar span.exturl:hover {
-  color: #eee;
+  color: #bdb000;
 }
 .sidebar span.exturl:hover {
   border-bottom-color: #eee;
@@ -1762,6 +1762,9 @@ pre .javascript .function {
   max-width: 96px;
   height: auto;
   border: 2px solid #333;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
   opacity: 1;
 }
 .site-author-name {
@@ -1774,7 +1777,7 @@ pre .javascript .function {
   margin-top: 5px;
   text-align: center;
   font-size: 14px;
-  color: #999;
+  color: #d4d838;
 }
 .site-state {
   display: flex;
@@ -1787,7 +1790,7 @@ pre .javascript .function {
 }
 .site-state-item {
   padding: 0 15px;
-  border-left: 1px solid #333;
+  border-left: 1px solid #d4d838;
 }
 .site-state-item:first-child {
   border-left: none;
@@ -1804,7 +1807,7 @@ pre .javascript .function {
 }
 .site-state-item-name {
   font-size: 13px;
-  color: inherit;
+  color: #ff0;
 }
 .feed-link {
   margin-top: 10px;
@@ -1848,7 +1851,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff719c;
+  background: #81de13;
 }
 .links-of-blogroll {
   margin-top: 10px;
