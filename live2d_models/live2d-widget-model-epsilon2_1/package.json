@@ -1,0 +1,20 @@
+{
+  "name": "live2d-widget-model-epsilon2_1",
+  "version": "1.0.5",
+  "description": "epsilon2_1 live2d model for live2d-widget.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiazeyu/live2d-widget-models.git"
+  },
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/xiazeyu/live2d-widget-models/issues"
+  },
+  "homepage": "https://github.com/xiazeyu/live2d-widget-models#readme",
+  "__npminstall_done": "Sun Apr 21 2019 20:04:55 GMT+0800 (GMT+08:00)",
+  "_from": "live2d-widget-model-epsilon2_1@1.0.5",
+  "_resolved": "http://registry.npm.taobao.org/live2d-widget-model-epsilon2_1/download/live2d-widget-model-epsilon2_1-1.0.5.tgz"
+}
